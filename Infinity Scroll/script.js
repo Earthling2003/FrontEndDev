@@ -45,28 +45,6 @@ function displayPhotos(){
     });
  }
 
- // create Elements for links & Photos, Add to DOM
-function displayPhotos(){
-    // Run function for each object in photosArray
-    photosArray.forEach((photo) => {
-        // create <a> to link to Unsplash
-        const item = document.createElement('a');
-        item.setAttribute('href', photo.links.html);
-        item.setAttribute('target', '_blank');
-
-        // create <img> for photo
-        const img =document.createElement('img');
-        img.setAttribute('src', photo.urls.regular);
-        img.setAttribute('alt', photo.alt_description);
-        img.setAttribute('title', photo.alt_description);
-        // put <img? inside <a>, then put both
-        item.appendChild(img);
-        imageContainer.appendChild(item);
-
-
-    });
- }
-
 // Get Photos from unsplash API
 
 async function getPhotos(){
